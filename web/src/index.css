@@ -1,0 +1,10 @@
+@import 'tailwindcss';
+
+@theme {
+  /* System fonts with good Arabic coverage — no network fetch, the app is local. */
+  --font-sans: 'Segoe UI', 'Noto Sans Arabic', Tahoma, system-ui, sans-serif;
+}
+
+body {
+  @apply bg-stone-50 text-stone-900 antialiased;
+}

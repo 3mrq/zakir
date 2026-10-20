@@ -1,0 +1,20 @@
+{
+  "name": "zakir",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "shared",
+    "server",
+    "web"
+  ],
+  "scripts": {
+    "dev": "concurrently -k -n server,web -c blue,green \"npm:dev -w server\" \"npm:dev -w web\"",
+    "check:claude": "npm run check:claude -w server",
+    "test": "npm test -w server",
+    "typecheck": "npm run typecheck -w server && npm run typecheck -w web",
+    "extract": "npm run extract -w server --"
+  },
+  "devDependencies": {
+    "concurrently": "^10.0.6"
+  }
+}
